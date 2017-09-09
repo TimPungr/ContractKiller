@@ -1,17 +1,60 @@
 fileFormatVersion: 2
 guid: fd7235ab56d46db46bf6e7e6fce98d80
-timeCreated: 1503935289
+timeCreated: 1504964340
 licenseType: Free
 ModelImporter:
   serializedVersion: 21
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Armature
+    100004: Fingers_L
+    100006: Fingers_R
+    100008: Foot_L
+    100010: Foot_R
+    100012: Hand_L
+    100014: Hand_R
+    100016: LowArm_L
+    100018: LowArm_R
+    100020: LowLeg_L
+    100022: LowLeg_R
+    100024: root
+    100026: root_001
+    100028: root_002
+    100030: Thumb_L
+    100032: Thumb_R
+    100034: Torso
+    100036: UpArm_L
+    100038: UpArm_R
+    100040: UpLeg_L
+    100042: UpLeg_R
     400000: //RootNode
+    400002: Armature
+    400004: Fingers_L
+    400006: Fingers_R
+    400008: Foot_L
+    400010: Foot_R
+    400012: Hand_L
+    400014: Hand_R
+    400016: LowArm_L
+    400018: LowArm_R
+    400020: LowLeg_L
+    400022: LowLeg_R
+    400024: root
+    400026: root_001
+    400028: root_002
+    400030: Thumb_L
+    400032: Thumb_R
+    400034: Torso
+    400036: UpArm_L
+    400038: UpArm_R
+    400040: UpLeg_L
+    400042: UpLeg_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: Torso
     7400000: Default Take
     9500000: //RootNode
+    13700000: Torso
   materials:
     importMaterials: 1
     materialName: 0
