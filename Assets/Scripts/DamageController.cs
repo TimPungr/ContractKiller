@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class DamageController : MonoBehaviour {
 
+    public GameObject person;
+    public float multiplier;
 
-    public int hp = 100;
 	// Use this for initialization
 	void Start () {
 		
@@ -18,19 +19,17 @@ public class DamageController : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Collided with " + collision.collider.name);
+        //Debug.Log("Collided with " + collision.collider.name);
         if (collision.collider.tag == "bullet")
         {
-            hp -=collision.collider.GetComponentInParent<GunScript>().dmg;
+            person.GetComponent<HPController>().hp -= collision.collider.GetComponentInParent<GunScript>().dmg * multiplier;
             Destroy(collision.collider.gameObject);
         }
 
-        if(hp == 0)
+        if (person.GetComponent<HPController>().hp == 0)
         {
-            Destroy(gameObject);
+            Destroy(person);
         }
-        
+
     }
-
-
 }

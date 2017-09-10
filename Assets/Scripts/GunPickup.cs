@@ -18,7 +18,7 @@ public class GunPickup : MonoBehaviour {
     {
         if (other.name == "FPSController")
         {
-        Debug.Log("Collided with something " + other.name);
+        
             GetComponent<Transform>().SetParent(GameObject.Find("Contact_R").transform);
             GetComponent<Transform>().position = GameObject.Find("Contact_R").transform.position;
         this.GetComponent<BoxCollider>().enabled = false;

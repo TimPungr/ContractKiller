@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableRagDoll : MonoBehaviour {
+public class DisableRagDoll : MonoBehaviour
+{
 
     Collider[] rigColliders;
     Rigidbody[] rigRigidbodies;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
 
 
         {
@@ -17,20 +19,24 @@ public class DisableRagDoll : MonoBehaviour {
         }
 
 
-            //wait 2-3 seconds.
-            /*foreach (Collider col in rigColliders)
+        //wait 2-3 seconds.
+        foreach (Collider col in rigColliders)
+        {
+           /* if (col.transform.tag != "col")
             {
                 col.enabled = false;
             }*/
-
-            foreach (Rigidbody rb in rigRigidbodies)
-            {
-                rb.isKinematic = true;
-            }
         }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+        foreach (Rigidbody rb in rigRigidbodies)
+        {
+            rb.isKinematic = true;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }
