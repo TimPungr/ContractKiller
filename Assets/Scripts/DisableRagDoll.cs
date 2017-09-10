@@ -18,10 +18,10 @@ public class DisableRagDoll : MonoBehaviour {
 
 
             //wait 2-3 seconds.
-            foreach (Collider col in rigColliders)
+            /*foreach (Collider col in rigColliders)
             {
                 col.enabled = false;
-            }
+            }*/
 
             foreach (Rigidbody rb in rigRigidbodies)
             {
