@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableRagDoll : MonoBehaviour
+public class RagdollController : MonoBehaviour
 {
 
     Collider[] rigColliders;
     Rigidbody[] rigRigidbodies;
+    Transform[] transforms;
+    Vector3[] rotations;
+    Vector3[] positions;
+    private float disTimer = 0f;
 
     // Use this for initialization
     void Start()
@@ -16,10 +20,11 @@ public class DisableRagDoll : MonoBehaviour
         {
             rigColliders = GetComponentsInChildren<Collider>();
             rigRigidbodies = GetComponentsInChildren<Rigidbody>();
+            
         }
 
 
-        //wait 2-3 seconds.
+        
         Disable();
     }
 
@@ -39,8 +44,10 @@ public class DisableRagDoll : MonoBehaviour
         }
     }
 
-    public void Enable()
+    public void Enable(float time)
     {
+
+        disTimer = time;
         foreach (Collider col in rigColliders)
         {
             /* if (col.transform.tag != "col")
@@ -59,6 +66,10 @@ public class DisableRagDoll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        disTimer -= Time.deltaTime;
+        if(disTimer <= 0)
+        {
+            Disable();
+        }
     }
 }
