@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bulletcript : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
+    public int dmg;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -13,4 +13,9 @@ public class Bulletcript : MonoBehaviour {
 	void Update () {
         Destroy(gameObject, 5);
 	}
+
+   /*public void OnCollisionEnter(Collision collision)
+    {
+        //Destroy(gameObject);
+    }*/
 }
