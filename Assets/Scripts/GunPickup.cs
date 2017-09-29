@@ -18,10 +18,11 @@ public class GunPickup : MonoBehaviour {
     {
         if (other.name == "FPSController")
         {
-        
+            GetComponent<GunScript>().enabled = true;
             GetComponent<Transform>().SetParent(GameObject.Find("Contact_R").transform);
             GetComponent<Transform>().position = GameObject.Find("Contact_R").transform.position;
-        this.GetComponent<BoxCollider>().enabled = false;
+            GetComponent<Transform>().rotation = GameObject.Find("Contact_R").transform.rotation;
+            this.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }

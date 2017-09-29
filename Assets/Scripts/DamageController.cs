@@ -26,10 +26,10 @@ public class DamageController : MonoBehaviour {
             Destroy(collision.collider.gameObject);
         }
 
-        if (person.GetComponent<HPController>().hp <= 0)
+        /*if (person.GetComponent<HPController>().hp <= 0)
         {
             Destroy(person);
-        }
+        }*/
 
     }
 }
